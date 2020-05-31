@@ -1,0 +1,371 @@
+@import url();
+
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  z-index: 0;
+}
+.hide{
+    display: none !important;
+}
+ 
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  min-height: 100%;
+  background: #02507F;
+  transition: all .5s ease;
+  z-index: 1;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  padding-left: 40px;
+  background: #02507F;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a:hover{
+  padding-left: 50px;
+  background: #fff !important ;
+  color:#02507F  !important  ;
+}
+.active{
+    background: #fff;
+    color:#02507F  !important  ;
+    text-shadow: 1px 1px 0 #02507F ;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #02507F;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 5px;
+  top: 5px;
+  font-size: 25px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #fff;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+section{
+  min-height: 100%;
+  transition: all .5s;
+  text-align: center ;
+  padding: 0;
+}
+
+
+/*fifo logo*/
+.fifo{
+  width: 14rem;
+  
+}
+/*nav paragraph*/
+.nav_para{
+  font-size: 80%;
+  margin-top: 0.5rem;
+}
+main{
+
+    text-align: center ;
+
+}
+header.trial{
+  display:flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center ;
+  background: #02507F ;
+  color:#fff ;
+  padding:1rem 5%;
+}
+img.logo{
+  max-width: 8rem ;
+  max-height: 5rem;
+  border-radius :50%;
+  margin-top: 1rem ;
+}
+nav{
+  text-align: center ;
+} 
+h1.nav_header{
+    font-size: 240%;
+}
+div.occupy{
+
+  width:6rem ;
+
+  display: none;
+}
+
+.accordion {
+  color: #000000;
+  margin:50px auto;
+  position: relative;
+  width: 90% !important;
+  z-index: 0;
+}
+.accordion span {
+  display: none
+}
+.tabs {
+  background-color: #FFF;
+  overflow: hidden;
+}
+.tabs dl dd a {
+  background-color: #fff;
+  border: 2px solid;
+  border-color:#02507F;
+  display: block;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 5px 20px;
+  color: #02507F;
+  text-align: justify;
+  text-decoration: none;
+}
+.tabs dl dd div {
+  background-color: #FFF;
+  height: 0;
+  overflow: scroll;
+  word-wrap: break-word;
+  box-shadow: 0 0 4px #02507F;
+  -webkit-box-shadow:0 0 4px #02507F inset;
+}
+
+.tabs dl dd div p {
+  color: #000000;
+  font-size: 16px;
+  padding: 15px;
+  text-align: justify;
+}
+.tabs dl dd a:hover {
+  color: #fff;
+  background-color: #02507F;
+}
+
+#tab0:target ~ .tabs .tab0 dd div,
+#tab1:target ~ .tabs .tab1 dd div,
+#tab2:target ~ .tabs .tab2 dd div,
+#tab3:target ~ .tabs .tab3 dd div,
+#tab4:target ~ .tabs .tab4 dd div,
+#tab5:target ~ .tabs .tab5 dd div {
+  height: 250px;
+}
+
+/**********log out alert **********/
+div.modal{
+  /**/
+  min-width: 100% ;
+  background-color: white;
+  margin-top :500px ;
+  padding: 2rem ;
+  border-radius: 0.3rem ;
+  overflow: hidden ;
+  min-height:100vh;
+  min-height: -webkit-fill-available;
+
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /*vertically aligns the main section*/
+  overflow: hidden ; 
+  color: red;
+  background-color :rgba(0,0,0,0.4);
+  z-index: 40060;
+}
+div.sub{
+  display :flex ;
+  background:rgba(0, 0, 0, 0.5);
+  width:100% ;
+
+  margin: 0 auto ;
+  flex-direction: column;
+  justify-content: center ;
+  align-items : center !important ;
+  height: 100% !important ;
+  min-height: -webkit-fill-available;
+  overflow: hidden ;
+  position :fixed ;
+  padding: 1rem ;
+}
+div.sbb{
+    display: flex ;
+    background :white ;
+    flex-direction :column ;
+    justify-content :center ;
+    align-items: center ;
+    padding: 2rem ;
+    max-height: 100%;
+    margin: 0 auto ;
+    background:linear-gradient(315deg, #e6e6e6, #fff) ;
+    border-radius:0.5rem ;
+    box-shadow:  0px 29px 31px #333, 0px 29px 31px #333;
+
+ 
+    
+}
+h1.modal_header{
+    align-self: flex-start;
+    border-bottom: 3px  solid red ;
+    margin-bottom: 1.5rem ;
+    color :#02507F ;
+    font-size: 150% ;
+}
+p.modal_question{
+    align-self: flex-start ;
+    color :#02507F ;
+    font-size :70%;
+}
+div.modal input{
+    display :block ;
+    width :100%;
+    margin: 1rem 0;
+    color :red;
+    border :1px solid red ;
+    text-shadow: 1px 1px 0 #c4c4c4 ;
+    text-transform:capitalize;
+    font-size: 110%;
+    border-radius :1.8rem;
+}
+
+input#yes{
+    margin-top: 3rem ;
+} 
+
+/**********MEDIA QUERIES**********/
+
+@media all and (min-width:790px) {
+  marquee{
+    margin: 2rem 0;
+  }
+  article.dashboard{
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+    grid-gap :2rem ;
+    max-width: 80%;
+    justify-content: space-evenly;
+    margin: 0 auto ;
+  }
+
+  .fifo{
+      width: 20rem;
+      
+    }
+  
+  .nav_para{
+      font-size: 80%;
+      margin-top: 0.3rem;
+    }
+  div.dashboard_card{
+    width:17rem;
+    height:14rem ;
+    border: 1px solid #02507F ;
+    opacity :0.9;
+  }
+  div.dashboard_card:hover{
+    width:19rem;
+    height:16rem;
+    transition: all 1s;
+  }
+  h2 i{
+    margin: 3rem auto;
+    font-size: 200%;
+  } 
+  header.trial{
+  display:flex;
+  flex-direction: row !important;
+  justify-content: space-between ;
+  align-items: center ;
+  color:#fff ;
+  padding:0.5rem 5%;
+  }
+  img.logo{
+    max-width: 6rem ;
+    max-height: 3rem;
+    border-radius :50%;
+    margin-top: 0;
+  }
+  div.occupy{
+    width:6rem ;
+    display: block ;
+  }
+  .container{
+    text-align: center;
+    max-width: 40%;
+    margin: 0 auto;
+  }
+  
+  .accordion {
+    color: #000000;
+    margin:50px auto;
+    position: relative;
+    width: 40% !important;
+    z-index: 0;
+  }
+  .accordion span {
+    display: none
+  }
+  h1.modal_header{
+    font-size: 200%;
+  }
+  p.modal_question{
+    font-size: 90%;
+  }
+  div.modal input{
+    height: 2rem;
+  }
+  
+}
+

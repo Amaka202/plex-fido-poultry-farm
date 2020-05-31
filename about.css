@@ -1,0 +1,341 @@
+/*basic css reset rules */
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: #fff;
+  color: #02507F ;
+  transition: all 0.5s ease-in;
+}
+
+/*hides alert display*/
+.hide{
+  display: none!important ;
+}
+/**********sidebar**********/
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  min-height: 100%;
+  background: #02507F ;
+  transition: all .5s ease;
+  z-index: 6;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white!important ;
+  line-height: 70px;
+  padding-left: 40px;
+  background: #02507e;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white ;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a:hover{
+  padding-left: 50px;
+  background: #fff !important ;
+  color:#02507F  !important  ;
+}
+
+.active{
+    background: #fff;
+    color:#02507F  !important  ;
+    text-shadow: 1px 1px 0 #02507F ;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #02507F;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 5px;
+  top: 5px;
+  font-size: 25px;
+  color: white!important ;
+  padding: 6px 12px;
+  transition: all .5s;
+  z-index: 500;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #fff!important ;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
+/*fifo logo*/
+.fifo{
+  width: 14rem;
+}
+/*nav paragraph*/
+.nav_para{
+  font-size: 80%;
+  margin-top: 0.5rem;
+}
+/*main section */
+main{
+    text-align: center ;
+    
+}
+/*header*/
+header.trial{
+  display:flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center ;
+  background: #02507F ;
+  color:#fff ;
+  padding:1rem 5%;
+}
+/*chicken image */
+img.logo{
+  max-width: 8rem ;
+  max-height: 5rem;
+  border-radius :50%;
+  margin-top: 1rem ;
+}
+nav{
+  text-align: center ;
+} 
+div.occupy{
+  width:6rem ;
+  display: none;
+}
+
+marquee{
+    margin :1rem ;
+}
+section{
+  min-height: 100%;
+  transition: all .5s;
+  text-align: center ;
+  padding: auto;
+}
+/*about section*/
+div.about,
+div.project{
+  width: 95%;
+  margin: 0 auto ;
+  height: auto ;
+  background:linear-gradient(315deg, #e6e6e6, #fff) ;
+  box-shadow:  0px 29px 31px #d9d9d9, 0px 29px 31px #ffffff;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  margin :2rem auto ;
+  padding: 2rem ;
+  line-height: 1.5 ;  
+}
+
+div.project{
+  margin-top :2rem ;
+}
+p.about_header{
+  font-size: 200%;
+  font-weight: 300;
+  text-align: left;
+  margin-bottom: rem ;
+  border-bottom: 0.5px solid #02507F ;
+}
+p.about_para,
+p.project_para{
+  text-align: justify ;
+  font-weight: 300;
+  padding-top: 1rem ;
+}
+h3.project_title{
+  font-size: 150%;
+  text-align: left;
+  margin-bottom:1.5rem ;
+  font-weight: 300 ;
+  text-decoration: underline;
+}
+
+/**********log out alert **********/
+div.modal{
+  /**/
+  min-width: 100% ;
+  background-color: white;
+  margin-top :500px ;
+  padding: 2rem ;
+  border-radius: 0.3rem ;
+  overflow: hidden ;
+  min-height:100vh;
+  min-height: -webkit-fill-available;
+
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /*vertically aligns the main section*/
+  overflow: hidden ; 
+  color: red;
+  background-color :rgba(0,0,0,0.4);
+  z-index: 40060;
+}
+div.sub{
+  display :flex ;
+  background:rgba(0, 0, 0, 0.5);
+  width:100% ;
+  margin: 0 auto ;
+  flex-direction: column;
+  justify-content: center ;
+  align-items : center !important ;
+  height: 100% !important ;
+  min-height: -webkit-fill-available;
+  overflow: hidden ;
+  position :fixed ;
+  padding: 1rem ;
+}
+div.sbb{
+  display: flex ;
+  background :white ;
+  flex-direction :column ;
+  justify-content :center ;
+  align-items: center ;
+  padding: 2rem ;
+  max-height: 100%;
+  margin: 0 auto ;
+  background:linear-gradient(315deg, #e6e6e6, #fff) ;
+  border-radius:0.5rem ;
+  box-shadow:  0px 29px 31px #333, 0px 29px 31px #333;
+
+ 
+    
+}
+h1.modal_header{
+    align-self: flex-start;
+    border-bottom: 3px  solid red ;
+    margin-bottom: 1.5rem ;
+    color :#02507F ;
+    font-size: 150% ;
+}
+p.modal_question{
+    align-self: flex-start ;
+    color :#02507F ;
+    font-size :70%;
+}
+div.modal input{
+    display :block ;
+    width :100%;
+    margin: 1rem 0;
+    color :red;
+    border :1px solid red ;
+    text-shadow: 1px 1px 0 #c4c4c4 ;
+    text-transform:capitalize;
+    font-size: 110%;
+    border-radius :1.8rem;
+    height: 2rem !important;
+}
+
+input#yes{
+    margin-top: 3rem ;
+} 
+
+/**********MEDIA QUERIES**********/
+@media all and (min-width:790px){
+ .error{
+   height:2rem;
+ }
+
+.fifo{
+  width: 20rem;
+  margin-top: 0;
+  }
+  
+.nav_para{
+  font-size: 80%;
+  margin-top: 0.3rem;
+  }
+  
+ header.trial{
+  display:flex;
+  flex-direction: row !important;
+  justify-content: space-between ;
+  align-items: center ;
+  color:#fff ;
+  padding:0.5rem 5%;
+}
+img.logo{
+  max-width: 6rem ;
+  max-height: 3rem;
+  border-radius :50%;
+  margin-top: 0;
+}
+div.occupy{
+  width:6rem ;
+  display: block ;
+  }
+    
+  p.about_header{
+
+    font-size: 300%;
+    font-weight: 300;
+    text-align: left;
+    
+    border-bottom: 0.5px solid #02507F ;
+  }
+h3.project_title{
+    font-size: 300%;
+    text-align: left;
+    margin-bottom:.5rem ;
+    font-weight: 300 ;
+    border-bottom : 0.5px solid #02507F ;
+    text-decoration: none ;
+    }
+    div.project{
+        margin-top :4rem ;
+    }
+    p.project_para{
+      line-height: 1.5;
+    }
+h1.modal_header{
+  font-size: 200%;
+}
+p.modal_question{
+  font-size: 90%;
+}
+div.modal input{
+  height: 2rem;
+}
+}

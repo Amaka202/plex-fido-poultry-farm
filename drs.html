@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description"
+        content="The FIDO poultry management system helps farmers manage their farms effectively with high accountability for every bird, feed, water, expenditure, profit, loss and more">   
+    <meta name="keywords" content="poultry, agriculture, management, chicks.accounts" />
+    <meta property="og:title" content="FIDO POULTRY" />
+    <title>FIDO POULTRY | Daily Records</title>
+    <link rel="stylesheet" href="drs_style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header>MENU</header>
+  <ul>
+<li><a href="dashboard.html"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+<li ><a class="active" href="drs.html"><i class="fas fa-clipboard"></i>Daily Record</a></li>
+<li><a href="accounting.html"><i class="fas fa-calculator"></i>Accounting</a></li>
+<li><a href="disease.html"><i class="fas fa-stethoscope"></i>Disease Check</a></li>
+<li><a href="about.html"><i class="fas fa-users"></i>About</a></li>
+<li class="log_out"><a href="index.html"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+</ul>
+</div>  
+<main class="main">
+    <header class="trial">
+    <div class="occupy">
+    </div>
+    <nav class="nav">
+      <img class="fifo" src="FIFO.png" alt="fifo">
+      <p class="nav_para">A chicken and egg story is literally our story </p>
+    </nav>
+    <img src="chick1.png" alt="chick" class="logo">
+  </header>
+
+<!--account CARDS-->
+<div class="bod">
+<section class="section">
+  <marquee behavior="scroll" bgcolor="#fff" loop="-1" width="80%">
+    <i>
+       <font color="#02507F">
+         Metrics as of today, 
+         <strong>
+          <span id="time"></span>
+         </strong>           
+       </font>
+    </i>
+ </marquee>
+  <div class="container">
+      <div class="success hide">
+          <p class="success_message">Your inputs have been saved successfully</p>
+      </div>  
+    <form id="contact" action="" method="post">
+      <fieldset>
+        <input class="drs_birds" placeholder="Number of Birds" type="number" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input class="drs_feeds" placeholder="Feeds Consumed (bags)" type="number" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <input class="drs_water" placeholder="Water Consumption (Litres)" type="number" tabindex="3" required>
+      </fieldset>
+      <fieldset>
+        <input class="drs_vaccination" placeholder="Vaccination per day" type="number" tabindex="4" required>
+      </fieldset>
+      <fieldset>
+        <input class="drs_drugs" placeholder="Available Drugs" type="number" tabindex="5" required>
+      </fieldset>
+      <fieldset>
+        <input class="drs_mortality" placeholder="Mortality" type="number" tabindex="6" required>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+</section>
+    <!--modal display-->
+    <div class="modal hide">
+      <div class="modal sub">
+        <div class="sbb">
+          <h1 class="modal_header">Confirmation</h1>
+          <p class="modal_question">Do you want to Log out from the application?</p>
+          <input type="button" name="yes" id="yes" value="Yes" />
+          <input type="button" name="no" id="no" value="No" />
+        </div>
+      </div>    
+    </div>
+    <script src="account.js"></script>
+    <script src="modal.js" type="text/javascript" charset="utf-8"></script>
+    <script src="drs.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+ 

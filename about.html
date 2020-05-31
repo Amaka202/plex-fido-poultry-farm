@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description"
+        content="The FIDO poultry management system helps farmers manage their farms effectively with high accountability for every bird, feed, water, expenditure, profit, loss and more">   
+    <meta name="keywords" content="poultry, agriculture, management, chicks.accounts" />
+    <meta property="og:title" content="FIDO POULTRY" />
+    <title>FIDO POULTRY/ACCOUNTS</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+      
+    <!--SIDE BAR-->
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header>MENU</header>
+      <ul>
+        <li><a href="dashboard.html"><i class="fas fa-qrcode"></i>Dasboard</a></li>
+        <li><a href="drs.html"><i class="fas fa-clipboard"></i>Daily Record</a></li>
+        <li><a href="accounting.html"><i class="fas fa-calculator"></i>Accounting</a></li>
+        <li><a href="disease.html"><i class="fas fa-stethoscope"></i>Disease Check</a></li>
+        <li><a class="active" href="about.html"><i class="fas fa-users"></i>About</a></li>
+        <li class="log_out"><a href="index.html"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+      </ul>
+    </div>
+    <!--account CARDS-->
+    <main class="main">
+        <header class="trial">
+        <div class="occupy">
+        </div>
+        <nav class="nav">
+          <img class="fifo" src="FIFO.png" alt="fifo">
+          <p class="nav_para">A chicken and egg story is literally our story</p>
+        </nav>
+        <img src="chick1.png" alt="chick" class="logo">
+      </header>
+    <section class="section">
+    <marquee behavior="scroll" bgcolor="transparent" loop="-1" width="80%" >
+      <i>
+          <font color="#02507F ">
+            <strong>
+            <span id="time"></span>
+            </strong>           
+          </font>
+      </i>
+    </marquee>
+    <!--mission-->
+    <div class="about">
+      <p class="about_header">Mission</p>
+      <p class="about_para">At FIDO POULTRY, Our mission is to be simply better in all we do, and to always deliver responsibly raised poultry with no added hormones or steroids </p>
+    </div>
+    <!--project-info-->
+    <div class="project">
+      <h3 class="project_title">About this Web Application</h3>
+      <p class="project_para">
+        The Farmers have a big issue with structure and to achieve that they need a system in place that helps them manage their farm effectively.
+        The app would achieve the following:<pre></pre>
+        <p class="project_para"><strong>Dashboard</strong> – displays count of existing birds, mortality rate, feeds, drugs, Sales, expenditure, profit and loss.<p>
+        <p class="project_para"><strong>Daily Record system</strong> – allows user input the number of birds, feed consumption, water consumption, vaccinations, Drugs taken and mortality. <p>
+      <p class="project_para"> <strong>Accounting – </strong> Allows user input sales and expenditure showing profits and loss.<p>
+        <p class="project_para"><strong>Disease check</strong> - here staff can specify symptoms in a sick chicken and get recommendation on drugs to be administered.<p>
+        <p class="project_para"><strong>User system</strong> - that will allow the farm owners and their staff log into the app and carryout certain functions.<p>
+            <pre>
+                
+            </pre>
+        
+        <p class="project_para"><em>With an application like this farmers are sure to have a full detail of their daily activities on record and can make better decisions from the report. This will enable the farm owner to monitor their workers activities in the farm.</em></p>
+      </p>
+    </div>
+    </section>
+    </main>
+    <!--modal display-->
+<div class="modal hide">
+  <div class="modal sub">
+    <div class="sbb">
+      <h1 class="modal_header">Confirmation</h1>
+      <p class="modal_question">Do you want to Log out from the application?</p>
+      <input type="button" name="yes" id="yes" value="Yes" />
+      <input type="button" name="no" id="no" value="No" />
+    </div>
+  </div>    
+</div>
+
+<script src="account.js"></script>
+<script src="modal.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
+ 

@@ -1,0 +1,108 @@
+*{
+  box-sizing: border-box ;
+  margin: 0 ;
+  padding :0;
+}
+body{
+  font-family: 'Trebuchet MS',Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+  color: #02507F ;
+  min-height: 100vh ;
+  min-height: -webkit-fill-available;
+  
+line-height: 1.5;
+background-size: cover;
+background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), url(chick.jpg) no-repeat center center fixed!important ;
+  
+}
+div.container-fluid{
+  background: linear-gradient(45deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), url(chick.jpg) no-repeat center center fixed!important ;
+  display :flex ;
+  flex-direction: column;
+  text-align: center ;
+  justify-content: center ;
+  align-items: center ;
+  min-height: 100%!important ;
+  min-height: -webkit-fill-available;
+  overflow: hidden ;
+  position :absolute;
+}
+
+.bod{
+ background-color: #ffffff;
+ border: 1px;
+ border-radius: 5px;
+ text-align: left;
+ 
+}
+
+.admin{
+font-size: 25px;
+margin-bottom: 10px;
+font-style: italic;
+}
+
+.admin{
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.para{
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+form{
+  padding: 20px;
+}
+
+input:invalid {
+border: 2px red;
+}
+
+
+input:valid {
+border: 2px solid green;
+}
+.hide{
+color:red !important;
+display:none;
+}
+input:invalid:required{
+border: 1px solid #ced4da;
+}
+
+.sele{
+  padding-top: 2px;
+}
+
+.btn{
+  background-color: #ffffff ;
+  color: #02507F ;
+  outline: none;
+
+border: none ;
+
+background-color:#EBECF0;
+text-shadow: 1px 1px 0 #fff;
+box-shadow: -5px -5px 20px #BABECC,  5px 5px 20px #fff;
+transition: all 0.2s ease-in-out;
+cursor: pointer;
+}
+
+.btn:hover{
+  
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+
+}
+
+
+.btn:active{
+box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #fff;
+}
+
+
